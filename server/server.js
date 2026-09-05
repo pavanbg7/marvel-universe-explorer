@@ -12,15 +12,25 @@ const User = require('./models/User');
 const app = express();
 const PORT = process.env.PORT || 5000;
 const cors = require('cors');
-app.use(cors({ origin: 'https://marvel-universe-explorer-phi.vercel.app', credentials: true }));
+app.use(cors({
+  origin: 'https://marvel-universe-explorer-phi.vercel.app',
+  credentials: true,
+}));
 
 app.use(express.json());
+
+app.set('trust proxy', 1);
 
 // Sessions = how the server "remembers" who's logged in across requests
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
+  cookie: {
+    secure: true,       // cookie only sent over HTTPS (both Render and Vercel are HTTPS, so this is fine)
+    httpOnly: true,      // not accessible via JavaScript (security best practice)
+    sameSite: 'none',    // REQUIRED to allow the cookie to be sent cross-domain (vercel.app -> onrender.com)
+  },
 }));
 
 // REGISTER
