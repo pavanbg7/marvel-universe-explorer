@@ -8,6 +8,7 @@ function Login() {
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const { login } = useAuth();
+  const API_URL = import.meta.env.VITE_API_URL;
 
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -18,7 +19,7 @@ function Login() {
     setError('');
 
     try {
-      const res = await axios.post('/api/login', formData, {
+      const res = await axios.post('${API_URL}/api/login', formData, {
         withCredentials: true, // sends/receives the session cookie
       });
       login({ username: res.data.username }); 

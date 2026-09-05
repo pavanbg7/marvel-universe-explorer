@@ -7,7 +7,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
 
-const User = require('./models/User');
+const User = require('./models/user');
 
 const app = express();
 const PORT = process.env.PORT || 5000;

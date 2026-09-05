@@ -2,6 +2,7 @@ import { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
 const AuthContext = createContext();
+const API_URL = import.meta.env.VITE_API_URL;
 
 export function useAuth() {
   return useContext(AuthContext);
@@ -14,7 +15,7 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     async function checkSession() {
       try {
-        const res = await axios.get('/api/me', { withCredentials: true });
+        const res = await axios.get('${API_URL}/api/me', { withCredentials: true });
         setUser({ username: res.data.username });
       } catch {
         setUser(null); // not logged in — totally normal, not an error to worry about
@@ -33,7 +34,7 @@ export function AuthProvider({ children }) {
   function logout() {
     setUser(null);
     // We'll also tell the backend to destroy the session (built below)
-    axios.post('/api/logout', {}, { withCredentials: true });
+    axios.post('${API_URL}/api/logout', {}, { withCredentials: true });
   }
 
   return (

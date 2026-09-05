@@ -11,6 +11,7 @@ function Signup() {
   });
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const API_URL = import.meta.env.VITE_API_URL;
 
   function handleChange(e) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,7 +22,7 @@ function Signup() {
     setError('');
 
     try {
-      await axios.post('/api/register', formData);
+      await axios.post('${API_URL}/api/register', formData);
       navigate('/login');
     } catch (err) {
       setError(err.response?.data?.error || 'Registration failed');
