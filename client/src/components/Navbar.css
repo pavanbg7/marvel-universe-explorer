@@ -1,0 +1,92 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  background: linear-gradient(to bottom, rgba(10,10,15,0.9), transparent);
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo {
+  font-family: var(--font-heading);
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+}
+
+.navbar-logo span {
+  color: var(--accent-red);
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.navbar-links a {
+  font-size: 15px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.navbar-links a:hover {
+  color: var(--text-primary);
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-red);
+  transition: width 0.3s;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.btn-login {
+  padding: 10px 24px;
+  border: 1.5px solid var(--text-primary);
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-login:hover {
+  background: var(--accent-red);
+  border-color: var(--accent-red);
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.navbar-user button {
+  background: transparent;
+  border: 1.5px solid var(--text-primary);
+  color: var(--text-primary);
+  padding: 8px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+.navbar-hidden{
+  transform: translateY(-100%);
+}

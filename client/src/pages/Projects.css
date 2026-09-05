@@ -1,0 +1,84 @@
+.projects-page {
+  padding: 140px 6% 60px;
+  min-height: 100vh;
+}
+
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.projects-header h1 {
+  font-size: 40px;
+  letter-spacing: 2px;
+}
+
+.filter-tabs {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-tabs button {
+  padding: 10px 24px;
+  background: transparent;
+  border: 1.5px solid var(--text-secondary);
+  color: var(--text-secondary);
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-tabs button.active {
+  background: var(--accent-red);
+  border-color: var(--accent-red);
+  color: white;
+}
+
+.filter-tabs button:hover:not(.active) {
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+.project-card img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.project-card-info {
+  padding: 12px 4px;
+}
+
+.project-card-info h3 {
+  font-size: 15px;
+  font-weight: 600;
+  font-family: var(--font-body);
+  margin-bottom: 4px;
+}
+
+.project-card-info span {
+  font-size: 13px;
+  color: var(--text-secondary);
+}

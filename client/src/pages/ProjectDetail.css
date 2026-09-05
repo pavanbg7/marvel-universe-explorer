@@ -1,0 +1,146 @@
+.detail-loading {
+  padding-top: 150px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.project-detail {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  overflow: hidden;
+}
+
+.detail-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  background-size: cover;
+  background-position: center top;
+  z-index: 0;
+}
+
+.detail-backdrop-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10,10,15,0.4) 0%,
+    rgba(10,10,15,0.95) 90%
+  );
+}
+
+.detail-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 40px;
+  padding: 220px 6% 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.detail-poster {
+  width: 280px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  aspect-ratio: 2/3;
+  align-self: flex-start;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.detail-info h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.detail-date {
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.detail-overview {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-primary);
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.detail-providers {
+  margin-top: 30px;
+}
+
+.detail-providers h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+.provider-list {
+  display: flex;
+  gap: 12px;
+}
+
+.provider-list img {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.detail-seasons {
+  margin-top: 40px;
+}
+
+.detail-seasons h3 {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.season-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.season-card {
+  display: flex;
+  gap: 16px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.season-card img {
+  width: 80px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.season-card-info h4 {
+  font-family: var(--font-body);
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.season-card-info span {
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.season-card-info p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.detail-note {
+  color: var(--text-secondary);
+  font-style: italic;
+}

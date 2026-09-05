@@ -1,0 +1,112 @@
+.upcoming-section {
+  padding: 80px 6%;
+}
+
+.upcoming-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.announced-section {
+  padding: 40px 6% 80px;
+}
+
+.announced-section h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  color: var(--accent-gold);
+}
+
+.announced-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.announced-card {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.announced-card:hover {
+  transform: translateY(-6px);
+}
+
+.announced-card img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+}
+
+.announced-info {
+  padding: 12px;
+}
+
+.announced-info span {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 250px);
+  gap: 16px;
+}
+
+.bento-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.bento-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.bento-item:hover img {
+  transform: scale(1.08);
+}
+
+/* Bento layout: first item large (spans 2 cols, 2 rows), rest smaller */
+.bento-item-0 {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.bento-item-1, .bento-item-2 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.bento-item-3, .bento-item-4 {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.bento-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+}
+
+.bento-info h3 {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.bento-info span {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
