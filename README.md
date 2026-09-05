@@ -2,7 +2,7 @@
 
 A full-stack MCU catalog and fan hub built with React and Express — browse every Marvel movie and series, explore an in-universe chronological timeline, discover the heroes behind the masks, and create an account to personalize your experience.
 
-**Live Demo:** _[add your deployed link here once live]_
+**Live Demo:** https://marvel-universe-explorer-phi.vercel.app/
 
 > Fan-made project for educational and portfolio purposes only. Not affiliated with, endorsed by, or sponsored by Marvel Studios or The Walt Disney Company. Movie and show data provided by [TMDB](https://www.themoviedb.org).
 
