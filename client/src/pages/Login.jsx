@@ -19,7 +19,7 @@ function Login() {
     setError('');
 
     try {
-      const res = await axios.post('${API_URL}/api/login', formData, {
+      const res = await axios.post(`${API_URL}/api/login`, formData, {
         withCredentials: true, // sends/receives the session cookie
       });
       login({ username: res.data.username }); 

@@ -22,7 +22,7 @@ function Signup() {
     setError('');
 
     try {
-      await axios.post('${API_URL}/api/register', formData);
+      await axios.post(`${API_URL}/api/register`, formData);
       navigate('/login');
     } catch (err) {
       setError(err.response?.data?.error || 'Registration failed');
